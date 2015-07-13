@@ -1,26 +1,3 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="controls_whileUntil" id="121" inline="false" x="110" y="33">
-    <field name="MODE">UNTIL</field>
-    <value name="NUMBER">
-      <block type="logic_compare" id="140" inline="true">
-        <field name="OP">GTE</field>
-        <value name="A">
-          <block type="sensor_spectrometer" id="235">
-            <field name="LIGHT">GREEN</field>
-          </block>
-        </value>
-        <value name="B">
-          <block type="math_number" id="154">
-            <field name="NUM">99</field>
-          </block>
-        </value>
-      </block>
-    </value>
-    <statement name="DO">
-      <block type="movement_reverse" id="261"></block>
-    </statement>
-    <next>
-      <block type="movement_stop" id="132"></block>
-    </next>
-  </block>
+  <block type="movement_reverse" id="271" x="60" y="39"></block>
 </xml>
