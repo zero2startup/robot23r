@@ -1,12 +1,25 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="controls_if" id="455" inline="false" x="131" y="160">
-    <value name="IF0">
-      <block type="sensor_spectrometer" id="322">
-        <field name="LIGHT">GREEN</field>
+  <block type="controls_repeat" id="543" inline="true" x="104" y="97">
+    <value name="TIMES">
+      <block type="math_number" id="550">
+        <field name="NUM">4</field>
       </block>
     </value>
-    <statement name="DO0">
-      <block type="movement_forward" id="332"></block>
+    <statement name="DO">
+      <block type="movement_forward" id="529">
+        <next>
+          <block type="controls_if" id="455" inline="false">
+            <value name="IF0">
+              <block type="sensor_spectrometer" id="322">
+                <field name="LIGHT">GREEN</field>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="movement_right" id="519"></block>
+            </statement>
+          </block>
+        </next>
+      </block>
     </statement>
   </block>
 </xml>
