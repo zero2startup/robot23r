@@ -1,69 +1,12 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="movement_forward" id="1" x="306" y="134">
-    <next>
-      <block type="robot_delay" id="136" inline="true">
-        <value name="DELAY">
-          <block type="math_number" id="143">
-            <field name="NUM">2000</field>
-          </block>
-        </value>
-        <next>
-          <block type="movement_stop" id="255">
-            <next>
-              <block type="robot_delay" id="257" inline="true">
-                <value name="DELAY">
-                  <block type="math_number" id="264">
-                    <field name="NUM">1000</field>
-                  </block>
-                </value>
-                <next>
-                  <block type="movement_leftmotor" id="153" inline="true">
-                    <value name="MOVLEFT">
-                      <block type="math_number" id="225">
-                        <field name="NUM">90</field>
-                      </block>
-                    </value>
-                    <next>
-                      <block type="movement_rightmotor" id="163" inline="true">
-                        <value name="MOVRIGHT">
-                          <block type="math_number" id="177">
-                            <field name="NUM">-90</field>
-                          </block>
-                        </value>
-                        <next>
-                          <block type="robot_delay" id="238" inline="true">
-                            <value name="DELAY">
-                              <block type="math_number" id="305">
-                                <field name="NUM">3400</field>
-                              </block>
-                            </value>
-                            <next>
-                              <block type="movement_forward" id="274">
-                                <next>
-                                  <block type="robot_delay" id="285" inline="true">
-                                    <value name="DELAY">
-                                      <block type="math_number" id="298">
-                                        <field name="NUM">2000</field>
-                                      </block>
-                                    </value>
-                                    <next>
-                                      <block type="movement_stop" id="236"></block>
-                                    </next>
-                                  </block>
-                                </next>
-                              </block>
-                            </next>
-                          </block>
-                        </next>
-                      </block>
-                    </next>
-                  </block>
-                </next>
-              </block>
-            </next>
-          </block>
-        </next>
+  <block type="controls_if" id="455" inline="false" x="131" y="160">
+    <value name="IF0">
+      <block type="sensor_spectrometer" id="322">
+        <field name="LIGHT">GREEN</field>
       </block>
-    </next>
+    </value>
+    <statement name="DO0">
+      <block type="movement_forward" id="332"></block>
+    </statement>
   </block>
 </xml>
