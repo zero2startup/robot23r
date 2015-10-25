@@ -10,6 +10,15 @@
         <statement name="DO0">
           <block type="movement_right" id="519"></block>
         </statement>
+        <next>
+          <block type="robot_delay" id="561" inline="true">
+            <value name="DELAY">
+              <block type="math_number" id="586">
+                <field name="NUM">2000</field>
+              </block>
+            </value>
+          </block>
+        </next>
       </block>
     </next>
   </block>
